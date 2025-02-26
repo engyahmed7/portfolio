@@ -75,6 +75,7 @@ const App = () => {
   const projects = [
     {
       title: "Sizely AI Project",
+      github: "https://github.com/engyahmed7/sizely-app",
       description:
         "Sizely App is a web-based application designed for real-time body pose detection via webcam. Utilizing the powerful TensorFlow.js and PoseNet models, it provides accurate body pose analysis. The application is built on Laravel for the backend, ensuring a robust and efficient user experience for pose recognition and analysis.",
       tags: [
@@ -87,12 +88,25 @@ const App = () => {
         "Webcam",
         "CSS",
       ],
-      image: "/api/placeholder/600/400",
+      demo: "http://sizely-pose-detection.wuaze.com/",
+      image:
+        "https://files.oaiusercontent.com/file-UitUGjU7BGrVZuY9QTUxFJ?se=2025-02-26T19%3A36%3A08Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D17d9a194-2b9e-498e-aa4a-e678525f5aab.webp&sig=LaDezM4Y0LXjfr1NlDnc/x66LFY7npIdjddwuRu4B6I%3D",
+    },
+    {
+      title: "Vacation Tracker",
+      github: "https://github.com/engyahmed7/Vacation_Tracker",
+      description:
+        "A comprehensive vacation management system with dual-approval workflow and Mattermost integration. The system supports three primary roles: Admin, HR, and Supervisor, ensuring a structured approval workflow. The application integrates with Mattermost chat to provide real-time notifications regarding vacation requests and approvals.",
+      tags: ["Laravel", "PHP", "Filament", "MySQL", "Eloquent", "Bootstrap"],
+      demo: "https://vacation-tracker.free.nf/",
+      image:
+        "https://files.oaiusercontent.com/file-YDctQDaBtA7cXWu9V4WscZ?se=2025-02-26T19%3A37%3A52Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D9e5b495d-ac44-4c36-a379-d4213f4b89b7.webp&sig=noot6S4yM62rYSx0Gl4VfKOBb0M/7mIdecmN/gVGyKg%3D",
     },
     {
       title: "WeBuild Project",
+      github: "https://github.com/engyahmed7/node-deployer",
       description:
-        "A platform for streamlined application deployments with GitHub/GitLab integration",
+        "WeBuild is a sass product designed to deliver a seamless project deployment experience. The backend repository houses the server-side code, responsible for handling authentication, user management , deployment service and other essential functionalities.",
       tags: [
         "Nest",
         "MongoDB",
@@ -102,13 +116,15 @@ const App = () => {
         "Jest",
         "Prisma",
       ],
-      image: "/api/placeholder/600/400",
+      image:
+        "https://files.oaiusercontent.com/file-StAJ1SnvNXnrfd3bnszDu8?se=2025-02-26T19%3A34%3A32Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3De84e977e-deef-4e51-b1d8-cc2f2b87e59f.webp&sig=7ztnW2jVl%2BVVRhhtPIbj%2BOe6OKP%2BXk/MeCvMkyrkMc8%3D",
     },
 
     {
-      title: "Scentence Perfume Shop",
+      title: "Food Tracking System",
+      github: "https://github.com/engyahmed7/food-tracking-system",
       description:
-        "E-commerce platform with dynamic filtering and secure payment processing",
+        "The Food Tracking System is a comprehensive solution designed for managing e-commerce logistics, specifically focused on shipping and payment integrations. This project includes an admin control panel built with Filament, real-time shipping data updates using Livewire, and a factory design pattern implementation for multiple payment gateways.",
       tags: [
         "Angular",
         "Node.js",
@@ -117,14 +133,8 @@ const App = () => {
         "Bootstrap",
         "Redis",
       ],
-      image: "/api/placeholder/600/400",
-    },
-    {
-      title: "Instagram Clone",
-      description:
-        "Social media platform with profiles, image sharing, comments, and messaging",
-      tags: ["Laravel", "PHP", "MySQL", "Eloquent", "Bootstrap"],
-      image: "/api/placeholder/600/400",
+      image:
+        "https://files.oaiusercontent.com/file-LkzRJsFBExTQkB9rE6SKpm?se=2025-02-26T19%3A39%3A22Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D589a91cc-3a59-4608-b21a-908f9b67a113.webp&sig=R1rgXVB9m4%2BJVEWQkiS8YuByw27UW7BPQ4I3Y06WvzY%3D",
     },
   ];
 
@@ -136,9 +146,9 @@ const App = () => {
       description:
         "Working on e-commerce projects using Laravel and WordPress, developing complete systems with intuitive dashboards and payment gateway integrations.",
       achievements: [
+        "Integrated AI using PoseNet for body measurements in e-commerce",
         "Developed a complete e-commerce system using Laravel Filament",
         "Designed numerous WordPress plugins enhancing WooCommerce",
-        "Integrated AI using PoseNet for body measurements in e-commerce",
       ],
     },
     {
@@ -228,7 +238,6 @@ const App = () => {
         darkMode ? "bg-gray-950" : "bg-gray-100"
       } text-${darkMode ? "white" : "gray-800"} transition-colors duration-300`}
     >
-      {/* Animated Background Elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
         {[...Array(8)].map((_, i) => (
           <motion.div
@@ -268,7 +277,6 @@ const App = () => {
         ))}
       </div>
 
-      {/* Mouse Follower */}
       <motion.div
         className={`fixed w-96 h-96 rounded-full bg-gradient-to-r 
         ${
@@ -289,7 +297,6 @@ const App = () => {
         }}
       />
 
-      {/* Progress Bar */}
       <div className="fixed top-0 left-0 w-full h-1 z-50">
         <motion.div
           className="h-full bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-500"
@@ -297,7 +304,6 @@ const App = () => {
         />
       </div>
 
-      {/* Header/Navigation */}
       <motion.header
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -324,7 +330,6 @@ const App = () => {
               <span className="text-xl font-bold">Engy Ahmed</span>
             </motion.div>
 
-            {/* Desktop Navigation */}
             <nav className="hidden md:flex space-x-8 items-center">
               {[
                 "Home",
@@ -359,7 +364,6 @@ const App = () => {
                 </motion.a>
               ))}
 
-              {/* Dark Mode Toggle */}
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
@@ -378,7 +382,6 @@ const App = () => {
               </motion.button>
             </nav>
 
-            {/* Mobile Menu Button */}
             <motion.button
               whileTap={{ scale: 0.9 }}
               onClick={() => setIsMenuOpen(true)}
@@ -392,7 +395,6 @@ const App = () => {
         </div>
       </motion.header>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
@@ -439,7 +441,6 @@ const App = () => {
                 </motion.a>
               ))}
 
-              {/* Dark Mode Toggle */}
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
@@ -461,7 +462,6 @@ const App = () => {
         )}
       </AnimatePresence>
 
-      {/* Hero Section */}
       <section
         id="home"
         className="min-h-screen relative flex items-center justify-center px-4 pt-20"
@@ -546,7 +546,7 @@ const App = () => {
               transition={{ delay: 0.7, duration: 0.8 }}
               className="text-xl text-gray-400 max-w-2xl mx-auto mb-4"
             >
-              <TypewriterEffect text="Full-Stack Developer with Frontend Expertise" />
+              <TypewriterEffect text="Full-stack developer with a strong focus on both frontend and backend technologies." />
             </motion.p>
 
             <motion.p
@@ -660,8 +660,8 @@ const App = () => {
               </div>
 
               <p className={darkMode ? "text-gray-300" : "text-gray-600"}>
-                Full-stack developer with a strong focus on frontend
-                technologies, passionate about creating responsive,
+                Full-stack developer with a strong focus on both frontend and
+                backend technologies, passionate about creating responsive,
                 user-friendly web applications with clean, maintainable code.
                 Experienced in developing e-commerce solutions, deploying
                 applications, and integrating third-party services.
@@ -676,7 +676,7 @@ const App = () => {
                 {[
                   { label: "Name", value: "Engy Ahmed Abdelaziz" },
                   { label: "Location", value: "Alexandria, Egypt" },
-                  { label: "Experience", value: "2+ Years" },
+                  { label: "Experience", value: "3+ Years" },
                   { label: "Availability", value: "Full-time, Freelance" },
                 ].map((item, i) => (
                   <motion.div
@@ -718,9 +718,21 @@ const App = () => {
 
                 <ul className="space-y-4">
                   {[
-                    { icon: Mail, value: "engya306@gmail.com" },
-                    { icon: Linkedin, value: "linkedin/engyahmed" },
-                    { icon: Github, value: "github/engyahmed" },
+                    {
+                      icon: Mail,
+                      value: "engya306@gmail.com",
+                      href: "mailto:engya306@gmail.com",
+                    },
+                    {
+                      icon: Linkedin,
+                      value: "linkedin/engyahmed",
+                      href: "https://www.linkedin.com/in/engy-ahmed-4109751b7/",
+                    },
+                    {
+                      icon: Github,
+                      value: "github/engyahmed",
+                      href: "https://github.com/engyahmed7",
+                    },
                   ].map((item, i) => {
                     const Icon = item.icon;
                     return (
@@ -735,13 +747,15 @@ const App = () => {
                         <div className="p-2 rounded-lg bg-indigo-500/10">
                           <Icon className="w-5 h-5 text-indigo-400" />
                         </div>
-                        <span
+                        <a
+                          href={item.href}
+                          target="_blank"
                           className={
                             darkMode ? "text-gray-300" : "text-gray-700"
                           }
                         >
                           {item.value}
-                        </span>
+                        </a>
                       </motion.li>
                     );
                   })}
@@ -960,14 +974,26 @@ const App = () => {
                   </div>
 
                   <div className="flex justify-end">
-                    <motion.button
+                    <motion.a
+                      href={project.github}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       className="px-4 py-2 rounded-lg group bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-500 font-medium flex items-center space-x-2 text-white text-sm"
                     >
                       <span>View details</span>
                       <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </motion.button>
+                    </motion.a>
+
+                    {project.demo && (
+                      <motion.a
+                        href={project.demo}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="px-4 ms-3 py-2 rounded-lg group bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-500 font-medium flex items-center space-x-2 text-white text-sm"
+                      >
+                        <span>Demo</span>
+                      </motion.a>
+                    )}
                   </div>
                 </div>
               </motion.div>
@@ -1031,7 +1057,7 @@ const App = () => {
                         >
                           <div
                             className="h-full rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-500"
-                            style={{ width: `${90 - i * 5}%` }}
+                            style={{ width: `${100}%` }}
                           />
                         </div>
                       </motion.div>

@@ -18,7 +18,7 @@ A modern, interactive developer portfolio showcasing professional experience, te
   - Experience timeline with role details 
   - Skills matrix with proficiency indicators 
   - Education timeline with academic achievements 
-  - Downloadable PDF resume integration 📄
+  - Downloadable PDF resume integration 
 
 - **Technical Excellence**
   - Responsive mobile-first design 
@@ -97,4 +97,3 @@ Contributions are welcome! Please follow these steps:
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Engy_Ahmed-0077B5?style=flat&logo=linkedin)](https://www.linkedin.com/in/engy-ahmed-4109751b7/)
 [![GitHub](https://img.shields.io/badge/GitHub-engyahmed7-181717?style=flat&logo=github)](https://github.com/engyahmed7)
 [![Email](https://img.shields.io/badge/Email-engya306%40gmail.com-D14836?style=flat&logo=gmail)](mailto:engya306@gmail.com)
-```

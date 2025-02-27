@@ -1,6 +1,6 @@
 # Engy Ahmed - Full-Stack Developer Portfolio 🌟
 
-[![Live Demo](https://img.shields.io/badge/LIVE_DEMO-8A2BE2?style=for-the-badge&logo=netlify&logoColor=white)](https://resplendent-pastelito-9d4fec.netlify.app/)
+[![Live Demo](https://img.shields.io/badge/LIVE_DEMO-8A2BE2?style=for-the-badge&logo=netlify&logoColor=white)](https://engyahmed.netlify.app/)
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
@@ -97,7 +97,7 @@ The portfolio is deployed on Netlify with CI/CD pipeline:
 - Global CDN distribution
 - Instant cache invalidation
 
-[Visit Live Site](https://resplendent-pastelito-9d4fec.netlify.app/)
+[Visit Live Site](https://engyahmed.netlify.app/)
 
 ## 🌟 Contribution Guidelines
 

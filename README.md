@@ -112,5 +112,5 @@ Contributions are welcome! Please follow these steps:
 
 **Let's Connect!**  
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Engy_Ahmed-0077B5?style=flat&logo=linkedin)](https://www.linkedin.com/in/engy-ahmed-4109751b7/) [![GitHub](https://img.shields.io/badge/GitHub-engyahmed7-181717?style=flat&logo=github)](https://github.com/engyahmed7) [![Email](https://img.shields.io/badge/Email-engyahmed7@gmail.com-D14836?style=flat&logo=gmail&logoColor=white)](mailto:engya306@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Engy_Ahmed-0077B5?style=flat&logo=linkedin)](https://www.linkedin.com/in/engy-ahmed-4109751b7/) [![GitHub](https://img.shields.io/badge/GitHub-engyahmed7-181717?style=flat&logo=github)](https://github.com/engyahmed7) [![Email](https://img.shields.io/badge/Email-engya306@gmail.com-D14836?style=flat&logo=gmail&logoColor=white)](mailto:engya306@gmail.com)
 

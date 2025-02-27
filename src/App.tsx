@@ -23,7 +23,10 @@ import {
   Globe,
   Briefcase,
   BookOpen,
+  CheckCircle,
 } from "lucide-react";
+
+import emailjs from "@emailjs/browser";
 
 import pdf from "./assets/Engy_Ahmed_Abdelaziz.pdf";
 import food_tracking from "./assets/food_tracking.png";
@@ -95,7 +98,7 @@ const App = () => {
         "CSS",
       ],
       demo: "http://sizely-pose-detection.wuaze.com/",
-      image:  sizely ,
+      image: sizely,
     },
     {
       title: "Vacation Tracker",
@@ -104,7 +107,7 @@ const App = () => {
         "A comprehensive vacation management system with dual-approval workflow and Mattermost integration. The system supports three primary roles: Admin, HR, and Supervisor, ensuring a structured approval workflow. The application integrates with Mattermost chat to provide real-time notifications regarding vacation requests and approvals.",
       tags: ["Laravel", "PHP", "Filament", "MySQL", "Eloquent", "Bootstrap"],
       demo: "https://vacation-tracker.free.nf/",
-      image: vacation ,
+      image: vacation,
     },
     {
       title: "WeBuild Project",
@@ -120,7 +123,7 @@ const App = () => {
         "Jest",
         "Prisma",
       ],
-      image: webuild ,
+      image: webuild,
     },
 
     {
@@ -136,7 +139,7 @@ const App = () => {
         "Bootstrap",
         "Redis",
       ],
-      image: food_tracking ,
+      image: food_tracking,
     },
   ];
 
@@ -233,6 +236,58 @@ const App = () => {
       ],
     },
   ];
+
+  const [showAlert, setShowAlert] = useState(false);
+
+  const [formData, setFormData] = useState({
+    from_name: "",
+    to_name: "Engy Ahmed",
+    email: "",
+    message: "",
+  });
+
+  const [status, setStatus] = useState("");
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    setShowAlert(true);
+
+    setTimeout(() => {
+      setShowAlert(false);
+    }, 5000);
+
+    emailjs
+      .send(
+        "service_lo95hc9",
+        "template_l0ews44",
+        {
+          to_name: formData.to_name,
+          from_name: formData.from_name,
+          message: formData.message,
+          reply_to: formData.email,
+        },
+        "1S9pGWXGZf9Ap8mWa"
+      )
+      .then(
+        (response) => {
+          setStatus("Message sent successfully!");
+          setFormData({ from_name: "", email: "", message: "" });
+
+          setTimeout(() => setStatus(""), 3000);
+        },
+        (error) => {
+          setStatus("Failed to send message. Try again later.");
+          console.error("EmailJS Error:", error);
+
+          setTimeout(() => setStatus(""), 3000);
+        }
+      );
+  };
 
   return (
     <div
@@ -1164,11 +1219,37 @@ const App = () => {
                   darkMode ? "bg-gray-800/60" : "bg-white"
                 } border ${
                   darkMode ? "border-gray-700" : "border-gray-200"
-                } shadow-lg`}
+                } shadow-lg relative`}
               >
+                {showAlert && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    className="absolute top-0 left-0 right-0 -mt-16 px-4"
+                  >
+                    <div className="bg-gradient-to-r from-green-500 to-emerald-600 text-white p-4 rounded-lg shadow-lg flex items-center justify-between">
+                      <div className="flex items-center space-x-3">
+                        <div className="bg-white/20 rounded-full p-1">
+                          <CheckCircle className="w-5 h-5" />
+                        </div>
+                        <p className="font-medium">
+                          Message sent successfully!
+                        </p>
+                      </div>
+                      <button
+                        onClick={() => setShowAlert(false)}
+                        className="text-white/80 hover:text-white"
+                      >
+                        <X className="w-5 h-5" />
+                      </button>
+                    </div>
+                  </motion.div>
+                )}
+
                 <h3 className="text-2xl font-semibold mb-6">Send Message</h3>
 
-                <form className="space-y-4">
+                <form className="space-y-4" onSubmit={sendEmail}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <label
@@ -1180,6 +1261,9 @@ const App = () => {
                       </label>
                       <input
                         type="text"
+                        value={formData.from_name}
+                        name="from_name"
+                        onChange={handleChange}
                         className={`w-full p-3 rounded-lg border ${
                           darkMode
                             ? "bg-gray-900 border-gray-700 text-gray-300"
@@ -1198,6 +1282,9 @@ const App = () => {
                       </label>
                       <input
                         type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
                         className={`w-full p-3 rounded-lg border ${
                           darkMode
                             ? "bg-gray-900 border-gray-700 text-gray-300"
@@ -1237,6 +1324,9 @@ const App = () => {
                     </label>
                     <textarea
                       rows="5"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
                       className={`w-full p-3 rounded-lg border ${
                         darkMode
                           ? "bg-gray-900 border-gray-700 text-gray-300"
@@ -1247,6 +1337,7 @@ const App = () => {
                   </div>
 
                   <motion.button
+                    type="submit"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.95 }}
                     className="w-full py-3 bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-500 rounded-lg font-medium text-white shadow-lg shadow-indigo-500/20"
@@ -1259,7 +1350,6 @@ const App = () => {
           </div>
         </div>
       </section>
-
       <footer
         className={`py-8 px-4 border-t ${
           darkMode

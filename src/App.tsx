@@ -25,6 +25,9 @@ import {
   BookOpen,
 } from "lucide-react";
 
+import pdf from './assets/Engy_Ahmed_Abdelaziz.pdf';
+
+
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
@@ -587,7 +590,7 @@ const App = () => {
                 <span>View Projects</span>
               </motion.a>
               <motion.a
-                href="../Engy_Ahmed_Abdelaziz.pdf"
+                href={pdf}
                 download="Engy_Ahmed_Abdelaziz.pdf"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

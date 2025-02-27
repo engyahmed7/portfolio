@@ -95,7 +95,7 @@ const App = () => {
         "CSS",
       ],
       demo: "http://sizely-pose-detection.wuaze.com/",
-      image: { sizely },
+      image:  sizely ,
     },
     {
       title: "Vacation Tracker",
@@ -104,7 +104,7 @@ const App = () => {
         "A comprehensive vacation management system with dual-approval workflow and Mattermost integration. The system supports three primary roles: Admin, HR, and Supervisor, ensuring a structured approval workflow. The application integrates with Mattermost chat to provide real-time notifications regarding vacation requests and approvals.",
       tags: ["Laravel", "PHP", "Filament", "MySQL", "Eloquent", "Bootstrap"],
       demo: "https://vacation-tracker.free.nf/",
-      image: { vacation },
+      image: vacation ,
     },
     {
       title: "WeBuild Project",
@@ -120,7 +120,7 @@ const App = () => {
         "Jest",
         "Prisma",
       ],
-      image: { webuild },
+      image: webuild ,
     },
 
     {
@@ -136,7 +136,7 @@ const App = () => {
         "Bootstrap",
         "Redis",
       ],
-      image: { food_tracking },
+      image: food_tracking ,
     },
   ];
 

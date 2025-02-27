@@ -25,8 +25,11 @@ import {
   BookOpen,
 } from "lucide-react";
 
-import pdf from './assets/Engy_Ahmed_Abdelaziz.pdf';
-
+import pdf from "./assets/Engy_Ahmed_Abdelaziz.pdf";
+import food_tracking from "./assets/food_tracking.png";
+import vacation from "./assets/vacation.png";
+import sizely from "./assets/sizely.png";
+import webuild from "./assets/webuild.png";
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -92,8 +95,7 @@ const App = () => {
         "CSS",
       ],
       demo: "http://sizely-pose-detection.wuaze.com/",
-      image:
-        "https://files.oaiusercontent.com/file-UitUGjU7BGrVZuY9QTUxFJ?se=2025-02-26T19%3A36%3A08Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D17d9a194-2b9e-498e-aa4a-e678525f5aab.webp&sig=LaDezM4Y0LXjfr1NlDnc/x66LFY7npIdjddwuRu4B6I%3D",
+      image: { sizely },
     },
     {
       title: "Vacation Tracker",
@@ -102,8 +104,7 @@ const App = () => {
         "A comprehensive vacation management system with dual-approval workflow and Mattermost integration. The system supports three primary roles: Admin, HR, and Supervisor, ensuring a structured approval workflow. The application integrates with Mattermost chat to provide real-time notifications regarding vacation requests and approvals.",
       tags: ["Laravel", "PHP", "Filament", "MySQL", "Eloquent", "Bootstrap"],
       demo: "https://vacation-tracker.free.nf/",
-      image:
-        "https://files.oaiusercontent.com/file-YDctQDaBtA7cXWu9V4WscZ?se=2025-02-26T19%3A37%3A52Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D9e5b495d-ac44-4c36-a379-d4213f4b89b7.webp&sig=noot6S4yM62rYSx0Gl4VfKOBb0M/7mIdecmN/gVGyKg%3D",
+      image: { vacation },
     },
     {
       title: "WeBuild Project",
@@ -119,8 +120,7 @@ const App = () => {
         "Jest",
         "Prisma",
       ],
-      image:
-        "https://files.oaiusercontent.com/file-StAJ1SnvNXnrfd3bnszDu8?se=2025-02-26T19%3A34%3A32Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3De84e977e-deef-4e51-b1d8-cc2f2b87e59f.webp&sig=7ztnW2jVl%2BVVRhhtPIbj%2BOe6OKP%2BXk/MeCvMkyrkMc8%3D",
+      image: { webuild },
     },
 
     {
@@ -136,8 +136,7 @@ const App = () => {
         "Bootstrap",
         "Redis",
       ],
-      image:
-        "https://files.oaiusercontent.com/file-LkzRJsFBExTQkB9rE6SKpm?se=2025-02-26T19%3A39%3A22Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D589a91cc-3a59-4608-b21a-908f9b67a113.webp&sig=R1rgXVB9m4%2BJVEWQkiS8YuByw27UW7BPQ4I3Y06WvzY%3D",
+      image: { food_tracking },
     },
   ];
 

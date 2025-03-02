@@ -1,7 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Code, Globe, ArrowRight, Download } from 'lucide-react';
-import TypewriterEffect from '../ui/TypewriterEffect';
+import React from "react";
+import { motion } from "framer-motion";
+import { Code, Globe, ArrowRight, Download } from "lucide-react";
+import TypewriterEffect from "../ui/TypewriterEffect";
+import pdf from "../../assets/Engy_Ahmed_Abdelaziz.pdf";
 
 interface HeroProps {
   darkMode: boolean;
@@ -134,7 +135,7 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
               <span>View Projects</span>
             </motion.a>
             <motion.a
-              href="/assets/Engy_Ahmed_Abdelaziz.pdf"
+              href={pdf}
               download="Engy_Ahmed_Abdelaziz.pdf"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

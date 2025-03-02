@@ -2,6 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
 import SectionHeader from '../ui/SectionHeader';
+import sizely from '../../assets/sizely.png';
+import vacation from '../../assets/vacation.png';
+import webuild from '../../assets/webuild.png';
+import food_tracking from '../../assets/food_tracking.png';
 
 interface ProjectsProps {
   darkMode: boolean;
@@ -25,7 +29,7 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
         "CSS",
       ],
       demo: "http://sizely-pose-detection.wuaze.com/",
-      image: "/src/assets/sizely.png",
+      image: sizely,
     },
     {
       title: "Vacation Tracker",
@@ -34,7 +38,7 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
         "A comprehensive vacation management system with dual-approval workflow and Mattermost integration. The system supports three primary roles: Admin, HR, and Supervisor, ensuring a structured approval workflow. The application integrates with Mattermost chat to provide real-time notifications regarding vacation requests and approvals.",
       tags: ["Laravel", "PHP", "Filament", "MySQL", "Eloquent", "Bootstrap"],
       demo: "https://vacation-tracker.free.nf/",
-      image: "/src/assets/vacation.png",
+      image: vacation,
     },
     {
       title: "WeBuild Project",
@@ -50,7 +54,7 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
         "Jest",
         "Prisma",
       ],
-      image: "/src/assets/webuild.png",
+      image: webuild,
     },
     {
       title: "Food Tracking System",
@@ -65,7 +69,7 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
         "Bootstrap",
         "Redis",
       ],
-      image: "/src/assets/food_tracking.png",
+      image: food_tracking,
     },
   ];
 

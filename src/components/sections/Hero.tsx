@@ -155,7 +155,7 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 2 }}
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 hidden sm:block"
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}
@@ -165,13 +165,13 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
             <span className="text-sm text-gray-400 mb-2">Scroll Down</span>
             <div
               className={`w-6 h-10 border-2 ${
-                darkMode ? "border-gray-600" : "border-gray-400"
+          darkMode ? "border-gray-600" : "border-gray-400"
               } rounded-full flex justify-center p-1`}
             >
               <motion.div
-                animate={{ y: [0, 6, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-                className="w-2 h-2 bg-indigo-400 rounded-full"
+          animate={{ y: [0, 6, 0] }}
+          transition={{ duration: 1.5, repeat: Infinity }}
+          className="w-2 h-2 bg-indigo-400 rounded-full"
               />
             </div>
           </motion.div>

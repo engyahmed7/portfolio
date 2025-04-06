@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Briefcase } from 'lucide-react';
-import SectionHeader from '../ui/SectionHeader';
+import React from "react";
+import { motion } from "framer-motion";
+import { Briefcase } from "lucide-react";
+import SectionHeader from "../ui/SectionHeader";
 
 interface ExperienceProps {
   darkMode: boolean;
@@ -39,6 +39,18 @@ const Experience: React.FC<ExperienceProps> = ({ darkMode }) => {
         "Integrated Google/Facebook authentication",
         "Developed admin dashboard using React and Laravel",
         "Implemented authorization system to secure data",
+      ],
+    },
+    {
+      title: "Flutter Developer",
+      company: "Freelance",
+      period: "Sep. 2024 - Apr. 2025",
+      description:
+        "Developed an e-commerce application for dental improvement, featuring mobile screens for users and an admin dashboard, all integrated with backend Node.js APIs.",
+      achievements: [
+        "Created user-friendly mobile screens for seamless shopping experience",
+        "Developed an admin dashboard for managing products and orders",
+        "Integrated backend Node.js APIs for efficient data handling",
       ],
     },
   ];

@@ -197,6 +197,7 @@ const Contact: React.FC<ContactProps> = ({ darkMode }) => {
                       value={formData.from_name}
                       name="from_name"
                       onChange={handleChange}
+                      required
                       className={`w-full p-3 rounded-lg border ${
                         darkMode
                           ? "bg-gray-900 border-gray-700 text-gray-300"
@@ -218,6 +219,7 @@ const Contact: React.FC<ContactProps> = ({ darkMode }) => {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
+                      required
                       className={`w-full p-3 rounded-lg border ${
                         darkMode
                           ? "bg-gray-900 border-gray-700 text-gray-300"
@@ -260,6 +262,7 @@ const Contact: React.FC<ContactProps> = ({ darkMode }) => {
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
+                    required
                     className={`w-full p-3 rounded-lg border ${
                       darkMode
                         ? "bg-gray-900 border-gray-700 text-gray-300"

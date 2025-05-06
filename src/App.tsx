@@ -18,7 +18,7 @@ const App: React.FC = () => {
 
   return (
     <div
-      className={`min-h-screen ${
+      className={`min-h-screen overflow-x-hidden ${
         darkMode ? "bg-gray-950" : "bg-gray-100"
       } text-${darkMode ? "white" : "gray-800"} transition-colors duration-300`}
     >

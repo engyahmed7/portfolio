@@ -20,7 +20,7 @@ const Experience: React.FC<ExperienceProps> = ({ darkMode }) => {
     {
       title: "Software Engineer",
       company: "Objects",
-      location: "San Francisco, CA",
+      location: "Alexandria, Egypt",
       period: "Jul. 2024 - Present",
       description:
         "Working on e-commerce projects using Laravel and WordPress, developing complete systems with intuitive dashboards and payment gateway integrations.",
@@ -31,9 +31,19 @@ const Experience: React.FC<ExperienceProps> = ({ darkMode }) => {
       ],
       skills: [
         "Laravel",
-        "WordPress",
-        "React",
+        "PHP",
         "AI Integration",
+        "Filament",
+        "PoseNet",
+        "MySQL",
+        "Firebase",
+        "Rest APIs",
+        "jQuery",
+        "Tensorflow.js",
+        "JavaScript",
+        "React",
+        "POS",
+        "WordPress",
         "WooCommerce",
       ],
       color: "from-blue-500 to-cyan-400",
@@ -46,7 +56,10 @@ const Experience: React.FC<ExperienceProps> = ({ darkMode }) => {
       period: "May 2024",
       description:
         "Enhanced Sala Platform by refining CSS and JavaScript for improved styling and performance.",
-      achievements: [],
+      achievements: [
+        "Improved CSS styling for better user experience",
+        "Optimized JavaScript for enhanced performance",
+      ],
       skills: ["CSS", "JavaScript", "Frontend Development"],
       color: "from-emerald-500 to-teal-400",
       icon: Building,
@@ -79,7 +92,15 @@ const Experience: React.FC<ExperienceProps> = ({ darkMode }) => {
         "Developed an admin dashboard for managing products and orders",
         "Integrated backend Node.js APIs for efficient data handling",
       ],
-      skills: ["Flutter", "Node.js", "Mobile Development", "Admin Dashboard"],
+      skills: [
+        "Flutter",
+        "Dart",
+        "Firebase",
+        "REST APIs",
+        "Node.js",
+        "Mobile Development",
+        "Admin Dashboard",
+      ],
       color: "from-rose-500 to-pink-400",
       icon: Briefcase,
     },
@@ -161,7 +182,7 @@ const Experience: React.FC<ExperienceProps> = ({ darkMode }) => {
 
                   <div className="mb-4">
                     <h3
-                      className={`text-2xl font-bold ${
+                      className={`text-2xl font-bold text-start ${
                         darkMode ? "text-white" : "text-gray-800"
                       } mb-1`}
                     >
@@ -184,7 +205,7 @@ const Experience: React.FC<ExperienceProps> = ({ darkMode }) => {
                   </div>
 
                   <p
-                    className={`mb-4 ${
+                    className={`mb-4 text-start ${
                       darkMode ? "text-gray-300" : "text-gray-600"
                     } leading-relaxed`}
                   >

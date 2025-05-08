@@ -145,14 +145,16 @@ const Experience: React.FC<ExperienceProps> = ({ darkMode }) => {
                 }`}
                 >
                   <div
-                    className={`absolute top-2 left-0 md:left-auto ${
-                      index % 2 === 0 ? "md:right-1" : "md:left-1"
-                    }
-                  w-10 h-10 -ml-11 md:ml-0 ${
-                    index % 2 === 0 ? "md:-mr-6" : "md:-ml-6"
-                  }
-                  rounded-full flex items-center justify-center z-10
-                  bg-gradient-to-r ${exp.color} shadow-lg`}
+                    className={`absolute left-0 top-0 md:left-auto ${
+                      index % 2 === 0 ? "md:right-0" : "md:left-0"
+                    } 
+                    w-10 h-10 -ml-11 md:ml-0 ${
+                      index % 2 === 0 ? "md:-mr-5" : "md:-ml-5"
+                    } 
+                    transform md:translate-x-0 
+                    rounded-full flex items-center justify-center z-10 
+                    bg-gradient-to-r ${exp.color} shadow-lg 
+                    border-2 ${darkMode ? "border-gray-800" : "border-white"}`}
                   >
                     <IconComponent className="w-5 h-5 text-white" />
                   </div>

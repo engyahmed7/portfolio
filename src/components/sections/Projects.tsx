@@ -51,7 +51,7 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
         "AI Chatbot",
         "PrismPHP",
       ],
-      image: "/src/assets/vehicleAI.jpeg",
+      image: "vehicleAI.jpeg",
     },
     {
       title: "WeBuild Project",

@@ -6,6 +6,7 @@ import sizely from "../../assets/sizely.png";
 import vacation from "../../assets/vacation.png";
 import webuild from "../../assets/webuild.png";
 import food_tracking from "../../assets/food_tracking.png";
+import vehicleAI from "../../assets/vehicleAI.jpeg";
 
 interface ProjectsProps {
   darkMode: boolean;
@@ -51,7 +52,7 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
         "AI Chatbot",
         "PrismPHP",
       ],
-      image: "vehicleAI.jpeg",
+      image: vehicleAI,
     },
     {
       title: "WeBuild Project",

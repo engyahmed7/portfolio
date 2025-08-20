@@ -265,7 +265,7 @@ const About: React.FC<AboutProps> = ({ darkMode }) => {
               exit="hidden"
               className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-16"
             >
-              <motion.div variants={itemVariants} className="space-y-8">
+              <motion.div className="space-y-8">
                 <div className="relative">
                   <div
                     className={`absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl blur opacity-20`}
@@ -343,12 +343,8 @@ const About: React.FC<AboutProps> = ({ darkMode }) => {
                   {personalInfo.map((item, i) => {
                     const Icon = item.icon;
                     return (
-                      <motion.div
+                      <div
                         key={i}
-                        variants={itemVariants}
-                        whileHover={cardHoverVariants.hover}
-                        onHoverStart={() => setHoveredCard(i)}
-                        onHoverEnd={() => setHoveredCard(null)}
                         className={`relative p-6 rounded-xl ${
                           darkMode ? "bg-gray-800/60" : "bg-white/80"
                         } backdrop-blur-sm border ${
@@ -375,7 +371,7 @@ const About: React.FC<AboutProps> = ({ darkMode }) => {
                             {item.value}
                           </div>
                         </div>
-                      </motion.div>
+                      </div>
                     );
                   })}
                 </div>
@@ -415,7 +411,7 @@ const About: React.FC<AboutProps> = ({ darkMode }) => {
                         <span>Resume</span>
                       </motion.a>
                     </div>
-
+                    {/* get in touch */}
                     <div className="space-y-4">
                       {contactInfo.map((item, i) => {
                         const Icon = item.icon;

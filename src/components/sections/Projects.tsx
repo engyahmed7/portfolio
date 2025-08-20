@@ -1,11 +1,11 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ExternalLink } from 'lucide-react';
-import SectionHeader from '../ui/SectionHeader';
-import sizely from '../../assets/sizely.png';
-import vacation from '../../assets/vacation.png';
-import webuild from '../../assets/webuild.png';
-import food_tracking from '../../assets/food_tracking.png';
+import React from "react";
+import { motion } from "framer-motion";
+import { ExternalLink } from "lucide-react";
+import SectionHeader from "../ui/SectionHeader";
+import sizely from "../../assets/sizely.png";
+import vacation from "../../assets/vacation.png";
+import webuild from "../../assets/webuild.png";
+import food_tracking from "../../assets/food_tracking.png";
 
 interface ProjectsProps {
   darkMode: boolean;
@@ -32,13 +32,26 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
       image: sizely,
     },
     {
-      title: "Vacation Tracker",
-      github: "https://github.com/engyahmed7/Vacation_Tracker",
+      title: "Vehicle AI Inspector",
+      github: "https://github.com/engyahmed7/vehicle-ai-inspector",
       description:
-        "A comprehensive vacation management system with dual-approval workflow and Mattermost integration. The system supports three primary roles: Admin, HR, and Supervisor, ensuring a structured approval workflow. The application integrates with Mattermost chat to provide real-time notifications regarding vacation requests and approvals.",
-      tags: ["Laravel", "PHP", "Filament", "MySQL", "Eloquent", "Bootstrap"],
-      demo: "https://vacation-tracker.free.nf/",
-      image: vacation,
+        "A comprehensive AI-powered platform for automated vehicle inspection and analysis. Leverages computer vision, OCR, and machine learning to extract critical data from vehicle images, verify user identities, and facilitate communication between buyers and sellers. Features an intelligent AI chatbot powered by PrismPHP that provides real-time support.",
+      tags: [
+        "Laravel",
+        "Livewire",
+        "MySQL",
+        "Google Vision API",
+        "Cloudinary",
+        "Pusher",
+        "Python",
+        "OCR",
+        "Computer Vision",
+        "KYC Verification",
+        "Redis",
+        "AI Chatbot",
+        "PrismPHP",
+      ],
+      image: "/src/assets/vehicleAI.jpeg",
     },
     {
       title: "WeBuild Project",
@@ -76,9 +89,7 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
   return (
     <section
       id="projects"
-      className={`py-20 px-4 ${
-        darkMode ? "bg-gray-900/30" : "bg-gray-100/70"
-      }`}
+      className={`py-20 px-4 ${darkMode ? "bg-gray-900/30" : "bg-gray-100/70"}`}
     >
       <div className="max-w-7xl mx-auto">
         <SectionHeader title="Featured" highlight="Projects" />

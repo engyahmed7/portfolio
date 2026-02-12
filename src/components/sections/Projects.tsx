@@ -2,90 +2,29 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import SectionHeader from "../ui/SectionHeader";
+import { projects as projectsData } from "../../data/projects";
 import sizely from "../../assets/sizely.png";
 import vacation from "../../assets/vacation.png";
 import webuild from "../../assets/webuild.png";
-import food_tracking from "../../assets/food_tracking.png";
 import vehicleAI from "../../assets/vehicleAI.jpeg";
+import rntls from "../../assets/rntls.png";
 
 interface ProjectsProps {
   darkMode: boolean;
 }
 
+const imageMap: Record<string, string> = {
+  "/src/assets/sizely.png": sizely,
+  "/src/assets/vacation.png": vacation,
+  "/src/assets/webuild.png": webuild,
+  "/src/assets/rntls.png": rntls,
+};
+
 const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
-  const projects = [
-    {
-      title: "Sizely AI Project",
-      github: "https://github.com/engyahmed7/sizely-app",
-      description:
-        "Sizely App is a web-based application designed for real-time body pose detection via webcam. Utilizing the powerful TensorFlow.js and PoseNet models, it provides accurate body pose analysis. The application is built on Laravel for the backend, ensuring a robust and efficient user experience for pose recognition and analysis.",
-      tags: [
-        "Laravel",
-        "PHP",
-        "MySQL",
-        "Javascript",
-        "Tensorflow",
-        "PoseNet",
-        "Webcam",
-        "CSS",
-      ],
-      demo: "http://sizely-pose-detection.wuaze.com/",
-      image: sizely,
-    },
-    {
-      title: "Vehicle AI Inspector",
-      github: "https://github.com/engyahmed7/vehicle-ai-inspector",
-      description:
-        "A comprehensive AI-powered platform for automated vehicle inspection and analysis. Leverages computer vision, OCR, and machine learning to extract critical data from vehicle images, verify user identities, and facilitate communication between buyers and sellers. Features an intelligent AI chatbot powered by PrismPHP that provides real-time support.",
-      tags: [
-        "Laravel",
-        "Livewire",
-        "MySQL",
-        "Google Vision API",
-        "Cloudinary",
-        "Pusher",
-        "Python",
-        "OCR",
-        "Computer Vision",
-        "KYC Verification",
-        "Redis",
-        "AI Chatbot",
-        "PrismPHP",
-      ],
-      image: vehicleAI,
-    },
-    {
-      title: "WeBuild Project",
-      github: "https://github.com/engyahmed7/node-deployer",
-      description:
-        "WeBuild is a sass product designed to deliver a seamless project deployment experience. The backend repository houses the server-side code, responsible for handling authentication, user management , deployment service and other essential functionalities.",
-      tags: [
-        "Nest",
-        "MongoDB",
-        "React",
-        "TypeScript",
-        "Bootstrap",
-        "Jest",
-        "Prisma",
-      ],
-      image: webuild,
-    },
-    {
-      title: "Food Tracking System",
-      github: "https://github.com/engyahmed7/food-tracking-system",
-      description:
-        "The Food Tracking System is a comprehensive solution designed for managing e-commerce logistics, specifically focused on shipping and payment integrations. This project includes an admin control panel built with Filament, real-time shipping data updates using Livewire, and a factory design pattern implementation for multiple payment gateways.",
-      tags: [
-        "Angular",
-        "Node.js",
-        "Express.js",
-        "MongoDB",
-        "Bootstrap",
-        "Redis",
-      ],
-      image: food_tracking,
-    },
-  ];
+  const projects = projectsData.map((project) => ({
+    ...project,
+    image: imageMap[project.image] || vehicleAI, 
+  }));
 
   return (
     <section
@@ -98,7 +37,7 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
           {projects.map((project, index) => (
             <motion.div
-              key={index}
+              key={project.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -133,9 +72,9 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
                 </p>
 
                 <div className="flex flex-wrap gap-2 mb-6">
-                  {project.tags.map((tag, i) => (
+                  {project.tags.map((tag) => (
                     <span
-                      key={i}
+                      key={tag}
                       className="text-xs px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400"
                     >
                       {tag}
@@ -144,17 +83,19 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
                 </div>
 
                 <div className="flex justify-end">
-                  <motion.a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="px-4 py-2 rounded-lg group bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-500 font-medium flex items-center space-x-2 text-white text-sm"
-                  >
-                    <span>View details</span>
-                    <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </motion.a>
+                  {project.github && (
+                    <motion.a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="px-4 py-2 rounded-lg group bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-500 font-medium flex items-center space-x-2 text-white text-sm"
+                    >
+                      <span>View details</span>
+                      <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </motion.a>
+                  )}
 
                   {project.demo && (
                     <motion.a
@@ -163,7 +104,9 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="px-4 ms-3 py-2 rounded-lg group bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-500 font-medium flex items-center space-x-2 text-white text-sm"
+                      className={`px-4 py-2 rounded-lg group bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-500 font-medium flex items-center space-x-2 text-white text-sm ${
+                        project.github ? "ms-3" : ""
+                      }`}
                     >
                       <span>Demo</span>
                     </motion.a>

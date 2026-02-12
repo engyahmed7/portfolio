@@ -9,6 +9,29 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "Rental Management Platform",
+    github: "",
+    description:"RNTLS is a comprehensive rental management platform built with Laravel that facilitates vehicle rentals between customers, car owners and Shop owners. The system provides a complete ecosystem for vehicle rental management, including real-time communication, payment processing, administrative oversight, and mobile API support.",
+    tags: [
+      "Laravel",
+      "Filament",
+      "Livewire",
+      "PHP",
+      "MySQL",
+      "Redis",
+      "Stripe",
+      "Firebase",
+      "Laravel Reverb",
+      "Horizon",
+      "Google Maps",
+      "Twilio",
+      "Persona",
+      "Google Cloud Vision",
+    ],
+    demo: "https://rntls-test.objectsdev.com/admin/",
+    image: "/src/assets/rntls.png",
+  },
+  {
     title: "Sizely AI Project",
     github: "https://github.com/engyahmed7/sizely-app",
     description:
@@ -50,20 +73,5 @@ export const projects: Project[] = [
       "Prisma",
     ],
     image: "/src/assets/webuild.png",
-  },
-  {
-    title: "Food Tracking System",
-    github: "https://github.com/engyahmed7/food-tracking-system",
-    description:
-      "The Food Tracking System is a comprehensive solution designed for managing e-commerce logistics, specifically focused on shipping and payment integrations. This project includes an admin control panel built with Filament, real-time shipping data updates using Livewire, and a factory design pattern implementation for multiple payment gateways.",
-    tags: [
-      "Angular",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Bootstrap",
-      "Redis",
-    ],
-    image: "/src/assets/food_tracking.png",
-  },
+  }
 ];

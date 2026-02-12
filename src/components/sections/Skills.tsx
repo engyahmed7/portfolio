@@ -1,54 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Monitor, Server, Database, Star } from 'lucide-react';
+import { Star } from 'lucide-react';
 import SectionHeader from '../ui/SectionHeader';
+import { skillCategories } from '../../data/skills';
 
 interface SkillsProps {
   darkMode: boolean;
 }
 
 const Skills: React.FC<SkillsProps> = ({ darkMode }) => {
-  const skillCategories = [
-    {
-      icon: Monitor,
-      title: "Frontend Development",
-      skills: [
-        "HTML/CSS",
-        "JavaScript",
-        "TypeScript",
-        "React",
-        "Angular",
-        "VueJS",
-        "Bootstrap",
-        "jQuery",
-      ],
-    },
-    {
-      icon: Server,
-      title: "Backend Development",
-      skills: [
-        "Node.js",
-        "Express.js",
-        "Laravel",
-        "PHP",
-        "WordPress",
-        "REST APIs",
-      ],
-    },
-    {
-      icon: Database,
-      title: "Databases & Tools",
-      skills: [
-        "MongoDB",
-        "MySQL",
-        "Git/Github",
-        "Docker",
-        "Jira",
-        "Postman",
-        "Redis",
-      ],
-    },
-  ];
 
   return (
     <section id="skills" className="py-20 px-4">
@@ -60,7 +20,7 @@ const Skills: React.FC<SkillsProps> = ({ darkMode }) => {
             const Icon = category.icon;
             return (
               <motion.div
-                key={index}
+                key={category.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -79,13 +39,13 @@ const Skills: React.FC<SkillsProps> = ({ darkMode }) => {
                 </div>
 
                 <div className="space-y-4">
-                  {category.skills.map((skill, i) => (
+                  {category.skills.map((skill, skillIndex) => (
                     <motion.div
-                      key={i}
+                      key={skill}
                       initial={{ width: 0 }}
                       whileInView={{ width: "100%" }}
                       viewport={{ once: true }}
-                      transition={{ delay: 0.3 + i * 0.1, duration: 0.8 }}
+                      transition={{ delay: 0.3 + skillIndex * 0.1, duration: 0.8 }}
                     >
                       <div className="flex justify-between mb-1">
                         <span

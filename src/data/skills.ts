@@ -1,7 +1,7 @@
-import { Monitor, Server, Database } from 'lucide-react';
+import { Monitor, Server, Database, LucideIcon } from 'lucide-react';
 
 export interface SkillCategory {
-  icon: any;
+  icon: LucideIcon;
   title: string;
   skills: string[];
 }
@@ -31,6 +31,12 @@ export const skillCategories: SkillCategory[] = [
       "PHP",
       "WordPress",
       "REST APIs",
+      "Laravel Reverb",
+      "Laravel Horizon",
+      "Messaging Queue",
+      "WebSocket",
+      "Redis",
+      "Firebase",
     ],
   },
   {

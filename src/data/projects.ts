@@ -10,7 +10,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: "Rental Management Platform",
-    github: "",
+    github: "https://github.com/engyahmed7/Rental-Management-Platform",
     description:"RNTLS is a comprehensive rental management platform built with Laravel that facilitates vehicle rentals between customers, car owners and Shop owners. The system provides a complete ecosystem for vehicle rental management, including real-time communication, payment processing, administrative oversight, and mobile API support.",
     tags: [
       "Laravel",
@@ -22,13 +22,13 @@ export const projects: Project[] = [
       "Stripe",
       "Firebase",
       "Laravel Reverb",
-      "Horizon",
+      "Laravel Horizon",
       "Google Maps",
       "Twilio",
-      "Persona",
+      "Persona KYC",
       "Google Cloud Vision",
     ],
-    demo: "https://rntls-test.objectsdev.com/admin/",
+    demo: "",
     image: "/src/assets/rntls.png",
   },
   {
@@ -43,7 +43,6 @@ export const projects: Project[] = [
       "Javascript",
       "Tensorflow",
       "PoseNet",
-      "Webcam",
       "CSS",
     ],
     demo: "http://sizely-pose-detection.wuaze.com/",
